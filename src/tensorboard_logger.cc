@@ -16,16 +16,9 @@
 #include "event.pb.h"
 #include "projector_config.pb.h"
 
+namespace tensorflow {
 using namespace std;
 using google::protobuf::TextFormat;
-using tensorflow::EmbeddingInfo;
-using tensorflow::Event;
-using tensorflow::HistogramProto;
-using tensorflow::ProjectorConfig;
-// using tensorflow::SpriteMetadata;
-using tensorflow::Summary;
-using tensorflow::SummaryMetadata;
-using tensorflow::TensorProto;
 
 // https://github.com/dmlc/tensorboard/blob/master/python/tensorboard/summary.py#L115
 int TensorBoardLogger::generate_default_buckets() {
@@ -308,4 +301,6 @@ string get_parent_dir(const string &path) {
         return "./";
     }
     return path.substr(0, last_slash_pos + 1);
+}
+
 }

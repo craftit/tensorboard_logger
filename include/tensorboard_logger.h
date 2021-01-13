@@ -9,8 +9,7 @@
 #include "crc.h"
 #include "event.pb.h"
 
-using tensorflow::Event;
-using tensorflow::Summary;
+namespace tensorflow {
 
 // extract parent dir from path by finding the last slash
 std::string get_parent_dir(const std::string &path);
@@ -148,5 +147,5 @@ class TensorBoardLogger {
     std::ofstream *ofs_;
     std::vector<double> *bucket_limits_;
 };  // class TensorBoardLogger
-
+}
 #endif  // TENSORBOARD_LOGGER_H

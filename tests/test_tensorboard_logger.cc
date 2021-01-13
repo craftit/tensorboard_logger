@@ -9,6 +9,7 @@
 using namespace std;
 
 int test_log(const char* log_file) {
+    using namespace tensorflow;
     TensorBoardLogger logger(log_file);
 
     // test scalar and histogram
