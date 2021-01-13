@@ -1,3 +1,5 @@
+build
+.idea
 *.pb
 *.pb.cc
 *.pb.h
